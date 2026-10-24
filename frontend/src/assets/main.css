@@ -1,0 +1,17 @@
+@import './base.css';
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+a {
+  color: #1c64f2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0a3f9e;
+}

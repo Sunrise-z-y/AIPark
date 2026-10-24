@@ -1,0 +1,339 @@
+/* 管理后台共享组件样式（供各业务模块复用）。 */
+
+:root {
+  --ap-primary: #1c64f2;
+  --ap-primary-dark: #0a3f9e;
+  --ap-primary-light: #4b8bff;
+  --ap-ink: #0f1f3d;
+  --ap-ink-soft: #64748b;
+  --ap-ink-muted: #94a3b8;
+  --ap-border: #e6edf7;
+  --ap-good: #16a34a;
+  --ap-warn: #d97706;
+  --ap-danger: #d03b3b;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 页面标题 ---------- */
+
+.page-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.page-head h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ap-ink);
+}
+
+.page-sub {
+  margin: 6px 0 0;
+  color: var(--ap-ink-soft);
+  font-size: 13px;
+}
+
+.page-head__actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ---------- 面板 ---------- */
+
+.panel {
+  padding: 22px;
+  margin-bottom: 18px;
+  background: #ffffff;
+  border: 1px solid var(--ap-border);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(15, 31, 61, 0.04);
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ap-ink);
+}
+
+.panel-sub {
+  margin-top: 4px;
+  color: var(--ap-ink-muted);
+  font-size: 12px;
+}
+
+.panel-head__actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ---------- 工具栏 ---------- */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.toolbar .spacer {
+  flex: 1;
+}
+
+/* ---------- 统计卡片 ---------- */
+
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.stat-tile {
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--ap-border);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(15, 31, 61, 0.04);
+}
+
+.stat-tile__label {
+  font-size: 12px;
+  color: var(--ap-ink-soft);
+}
+
+.stat-tile__value {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ap-ink);
+}
+
+.stat-tile__value .unit {
+  margin-left: 2px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.stat-tile__hint {
+  margin-top: 5px;
+  font-size: 11px;
+  color: var(--ap-ink-muted);
+}
+
+/* ---------- 标签 ---------- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+
+.tag--success {
+  color: #15803d;
+  background: #e9f8ee;
+}
+
+.tag--info {
+  color: #1c64f2;
+  background: #eef3fb;
+}
+
+.tag--warning {
+  color: #b45309;
+  background: #fdf2e2;
+}
+
+.tag--danger {
+  color: #b91c1c;
+  background: #fdecec;
+}
+
+.tag--muted {
+  color: #64748b;
+  background: #f1f4f9;
+}
+
+/* ---------- 车牌徽标 ---------- */
+
+.plate-badge {
+  display: inline-flex;
+  padding: 3px 9px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  background: linear-gradient(135deg, var(--ap-primary), var(--ap-primary-light));
+  border-radius: 6px;
+}
+
+/* ---------- 数据表 ---------- */
+
+.tbl {
+  overflow-x: auto;
+}
+
+.trow {
+  display: grid;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 10px;
+  font-size: 13px;
+  color: var(--ap-ink-soft);
+  border-bottom: 1px solid #f0f4fb;
+}
+
+.trow:last-child {
+  border-bottom: 0;
+}
+
+.trow--head {
+  padding-top: 2px;
+  color: var(--ap-ink-muted);
+  font-size: 12px;
+}
+
+.tcell--strong {
+  color: var(--ap-ink);
+  font-weight: 600;
+}
+
+/* ---------- 空状态 ---------- */
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+  color: var(--ap-ink-muted);
+}
+
+.empty p {
+  margin: 12px 0 0;
+  color: var(--ap-ink-soft);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.empty span {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+/* ---------- 分页 ---------- */
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  margin-top: 2px;
+}
+
+.pager__sum {
+  color: var(--ap-ink-muted);
+  font-size: 12px;
+}
+
+/* ---------- 分段控制器 ---------- */
+
+.seg {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  background: #eff3f9;
+  border: 1px solid #e5ecf6;
+  border-radius: 10px;
+}
+
+.seg-btn {
+  height: 30px;
+  padding: 0 14px;
+  color: var(--ap-ink-soft);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.seg-btn:hover {
+  color: var(--ap-ink);
+}
+
+.seg-btn.is-active {
+  color: var(--ap-primary);
+  font-weight: 600;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 31, 61, 0.12);
+}
+
+/* ---------- Element Plus 轻量定制 ---------- */
+
+.el-dialog {
+  border-radius: 16px;
+}
+
+.el-dialog__header {
+  padding-bottom: 6px;
+}
+
+.el-button--primary {
+  --el-button-bg-color: #1c64f2;
+  --el-button-border-color: #1c64f2;
+  --el-button-hover-bg-color: #1559e3;
+  --el-button-hover-border-color: #1559e3;
+  --el-button-active-bg-color: #0a3f9e;
+  --el-button-active-border-color: #0a3f9e;
+}
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 1024px) {
+  .stat-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .stat-tiles {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .page-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

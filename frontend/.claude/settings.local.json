@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(node node_modules/vue-tsc/bin/vue-tsc.js --build)",
+      "Bash(node *)",
+      "Bash(cd *)",
+      "Bash(node node_modules/vite/bin/vite.js --port 5199 --strictPort)",
+      "Bash(echo \"started pid $!\")",
+      "Bash(curl -s --retry 15 --retry-connrefused --retry-delay 1 -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:5199/)",
+      "Bash(curl -s http://localhost:5199/)",
+      "Bash(netstat -ano)",
+      "Bash(awk '{print $5}')",
+      "Bash(taskkill //PID 27852 //F)"
+    ]
+  }
+}
